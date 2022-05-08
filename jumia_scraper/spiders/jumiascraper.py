@@ -4,6 +4,7 @@ import scrapy
 class JumiascraperSpider(scrapy.Spider):
     name = 'jumiascraper'
     start_urls = ['http://jumia.com.ng/catalog/?q=oraimo']
+    # start_urls = ['http://jumia.com.ng/catalog/?q=samsung+phones']
 
     def parse(self, response):
         for products in response.css('a.core'):
